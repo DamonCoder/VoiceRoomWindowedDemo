@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bg_voice_room" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ltd.maimeng.core.ui.widget.StatusBarView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_voice_room_name"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:paddingLeft="18dp"
+                android:paddingRight="18dp"
+                android:background="@drawable/shape_btn_bg_000000_30"
+                android:gravity="center"
+                android:textColor="@color/color_FFFFFF"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/iv_voice_room_quit"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/shape_btn_bg_000000_30"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_quit" />
+
+            <ImageView
+                android:id="@+id/iv_voice_room_windowed"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/shape_btn_bg_000000_30"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_windowed" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_voice_room_message"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+</RelativeLayout>
